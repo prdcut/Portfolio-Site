@@ -3,7 +3,7 @@ Colors used
 
 Text Color (Dark Gray): #2b2b2b;
 Primary Color (Light Pastel Red): #FF6B6B; brighter: #E92525;
-Secondary Color (Light Pastel Blue): #4EBABA; darker: #168C8C;
+  Secondary Color (Light Pastel Blue): #4EBABA; darker: #168C8C;
 Terceary Color (Light Pastel Green): C5F466;
  */
 
@@ -29,6 +29,9 @@ body {
   text-align: center;
 }
 
+main {
+  padding: 40px
+}
 /* Header styles */
 h1 {
   font-size: 30px;
@@ -76,7 +79,9 @@ table {
 }
 
 /* Buttons */
-.button, button {
+.button,
+.cv-button,
+button {
   /* overwrites browser defaults and resets the border */
   border: none;
   display: inline-block;
@@ -98,7 +103,9 @@ table {
 button:hover,
 button:focus,
   .button:hover,
-  .button:focus {
+  .button:focus,
+  .cv-button:hover,
+  .cv-button:focus {
     cursor: pointer;
     opacity: 0.8;
   }
@@ -124,11 +131,11 @@ button:focus,
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 }
 
-/* Page header */
+/* Page header index.html*/
 .page-header {
   display: flex;
   width: 100%;
-  padding: 20px;
+  padding: 40px;
 }
 .page-header__item {
   flex: 0 1 200px;
@@ -138,7 +145,7 @@ button:focus,
   text-align: right;
 }
 
-/* index.html profile styles  */
+/* Profile styles index.html */
 .profile__portrait {
   float: left;
   width: 250px;
@@ -174,7 +181,7 @@ button:focus,
   text-decoration: none;
 }
 
-/* work.html experience grid styles */
+/* Grid styles*/
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -182,12 +189,25 @@ button:focus,
 }
 .grid__item {
   background-color: lightgray;
+  padding: 10px;
 }
 
 /* about.html styles */
-.paragraph-aboutme {
+.row {
+  display: inline-flex;
+}
+
+.column {
+  flex: 50%;
+  padding: 20px;
+  height: 400px;
+}
+
+/* contact form */
+.contactme {
   display: block;
-  margin: 0 500px;
+  padding: 10px;
+  text-align: center;
 }
 
 /* Animation Keyframes */
@@ -202,9 +222,11 @@ button:focus,
       fill: #f76414;
     }
   }
+
 .sun {
   animation: 4s color-change infinite alternate linear;
 }
+
 @keyframes cloud-move {
   from {
     transform: translate(0, 50px);

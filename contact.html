@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,12 +8,11 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/style.production.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
-
 <body>
   <header class="page-header">
-    <img src="img/dm-logo.svg" class="page-header__item"alt="My personal logo">
+    <img src="img/dm-logo.svg" class="page-header__item" alt="My personal logo">
     <nav class="main-navigation page-header__item">
       <ul role="menubar" class=  "navigation-list">
         <li role="presentation">
@@ -30,34 +28,27 @@
           <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
         </li>
        </ul>
-    </nav>
+      </nav>
   </header>
-  <div>
   <h1>How to contact me?</h1>
-  </div>
   <div>
-    DanielMayorga GmbH<br>
-    Muster Str. 123 <br>
-    10777 Berlin<br>
-    Deutschland<br>
-    <br>
-    Tel +49 30 1234 5678<br>
-    Skype daniel.skype<br>
+    Daniel Mayorga<br>
+    13347, Berlin<br>
+    Deutschland<br><br>
     <a href="mailto:d.mayorga@gmx.de">d.mayorga@gmx.de</a>
   </div>
   <br>
   <div>
-    <form action="" method="post" id="contact-form">
+    <form action="/action_page.php" method="post" id="contact-form" class="contactme">
       <label class="standard-lable" for="contact-email">E-mail: </label>
-      <input type="email" id="contact-email"required>
+      <input type="email" id="contact-email" required>
       <br>
-
-      <label class="standard-label" for="contact-tepehone">Telephone: </label>
-      <input type="tel"id="contact-telephone">
+      <label class="standard-label" for="contact-telephone">Telephone: </label>
+      <input type="tel" id="contact-telephone">
       <br>
-
-      <label class="standard-label" for="contact-message">Message: </label>
+      <label class="standard-label" for="submit-button">Message: </label>
       <textarea maxlength="240" required></textarea>
+      <br>
       <input type="submit" value="Send message" id="submit-button">
       <br>
     </form>
@@ -69,14 +60,14 @@
       <a href="https://github.com/proudcut" target="_blank">
         <img src="img/github.svg" alt="Github logo. Will redirect to my github account" height="30" width="30" />
       </a>
-      <a href="https://www.instagram.com/danielffma/" target="_blank">
-        <img src="img/instagram.svg" alt="Instagram logo. Will redirect to my instagram account" height="30" width="30" />
+      <a href="https://www.behance.net/danielffma" target="_blank">
+        <img src="img/behance.svg" alt="Behance logo. Will redirect to my behance account" height="30" width="30" />
       </a>
       <a href="https://www.linkedin.com/in/daniel-mayorga-a42367133/" target="_blank">
         <img src="img/linkedin.svg" alt="Linkedin logo. Will redirect to my linkedin account" height="30" width="30" />
       </a>
     </div>
   </footer>
-      <script src="js/tota11y.min.js"> </script>
-    </body>
-  </html>
+  <script src="js/tota11y.min.js"> </script>
+</body>
+</html>
