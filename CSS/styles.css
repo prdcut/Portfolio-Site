@@ -93,6 +93,7 @@ button {
   text-decoration: none;
   /*adds spacing to the button (this will be discussed more in-depth later) */
   padding: 10px;
+  margin: 10px;
   border-radius: 3px;
   /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
@@ -113,22 +114,6 @@ button:focus,
 .button__secondary {
   background-color: var(--terciary-color);
   color: white;
-}
-
-#submit-button {
-  /* overwrites browser defaults and resets the border */
-  border: none;
-  /* takes the font from the outer container */
-  font-family: inherit;
-  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-  background-color: var(--secondary-color);
-  color: white;
-  text-decoration: none;
-  /*adds spacing to the button (this will be discussed more in-depth later) */
-  padding: 10px;
-  border-radius: 3px;
-  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 /* Page header index.html*/
@@ -193,34 +178,62 @@ button:focus,
 }
 
 /* about.html styles */
-.row {
-  display: inline-flex;
+.row{
+  margin: 10px;
 }
-
 .column {
-  flex: 50%;
+  display: inline-block;
+  float: left;
+  width: 50%;
   padding: 20px;
   height: 400px;
 }
 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.berlin-illustration {
+  margin: 10px;
+}
+
 /* contact form */
-.contactme {
+input,
+textarea {
+  width: 200px; /* Full width */
+  padding: 10px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin: auto;
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
   display: block;
-  padding: 10px;
+  justify-content: center;
+}
+
+.contactme {
+  width: 300px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  justify-content: center;
   text-align: center;
+  margin: auto;
 }
 
 /* Animation Keyframes */
 
 @keyframes color-change {
     0% {
-      background-color: #edc655;
+      fill: #edc655;
     }
     50% {
-      background-color: #fcffad;
+      fill: #fcffad;
     }
     100% {
-      background-color: #f76414;
+      fill: #f76414;
     }
   }
 
@@ -257,12 +270,18 @@ button:focus,
   .grid {
     grid-template-columns: 1fr;
   }
+  .column {
+    width: 100%;
+  }
 }
 
 /* This media query will take effect between the width:500px and 750px  */
-@media all and (min-width: 500px) and (max-width: 750px){
+@media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
+  }
+  .column {
+    width: 100%;
   }
 }
 
@@ -274,5 +293,8 @@ button:focus,
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
+    }
+  .column {
+    width: 100%;
     }
   }

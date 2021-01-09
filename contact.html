@@ -30,6 +30,7 @@
        </ul>
       </nav>
   </header>
+<main>
   <h1>How to contact me?</h1>
   <div>
     Daniel Mayorga<br>
@@ -38,21 +39,18 @@
     <a href="mailto:d.mayorga@gmx.de">d.mayorga@gmx.de</a>
   </div>
   <br>
-  <div>
-    <form action="/action_page.php" method="post" id="contact-form" class="contactme">
+  <div class="contactme">
+    <form action="/action_page.php" method="post" id="contact-form">
       <label class="standard-lable" for="contact-email">E-mail: </label>
       <input type="email" id="contact-email" required>
-      <br>
       <label class="standard-label" for="contact-telephone">Telephone: </label>
       <input type="tel" id="contact-telephone">
-      <br>
       <label class="standard-label" for="submit-button">Message: </label>
-      <textarea maxlength="240" required></textarea>
-      <br>
-      <input type="submit" value="Send message" id="submit-button">
-      <br>
+      <textarea maxlength="240" placeholder="Write something..." required></textarea>
+      <input class="button" type="submit" value="Send message" id="submit-button">
     </form>
   </div>
+</main>
   <footer class="page-footer">
     <p>Find me on</p>
     <div class="social-media">
